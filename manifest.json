@@ -1,0 +1,34 @@
+{
+  "name": "Ad Highlight",
+  "version": "0.0.2",
+  "description": "Highlights promoted content on social media",
+  "permissions": ["activeTab"],
+  "page_action": {
+    "default_icon": {
+      "16": "images/adhighlight16.png",
+      "32": "images/adhighlight32.png",
+      "48": "images/adhighlight48.png",
+      "128": "images/adhighlight128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*.twitter.com/*",
+        "https://*.twitter.com/*",
+        "http://*.facebook.com/*",
+        "https://*.facebook.com/*",
+        "http://*.amazon.com/*",
+        "https://*.amazon.com/*"
+      ],
+      "js": ["adhighlight.js"]
+    }
+  ],
+  "icons": {
+    "16": "images/adhighlight16.png",
+    "32": "images/adhighlight32.png",
+    "48": "images/adhighlight48.png",
+    "128": "images/adhighlight128.png"
+  },
+  "manifest_version": 2
+}
